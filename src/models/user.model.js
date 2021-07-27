@@ -1,4 +1,4 @@
-const {connection, Sequelize} = require('../loaders/db');
+const {connection, Sequelize} = require('./db');
 
 const User = (sequelize, type) =>{
     return sequelize.define('users', {
@@ -7,19 +7,25 @@ const User = (sequelize, type) =>{
             primaryKey: true,
             autoIncrement: true
         },
-        username:{
-            type: type.STRING,
+        dni:{
+            type: type.INTEGER,
             unique:true,
             allowNull:false
         },
-        password: {
+        procedureNumber: {
             type: type.STRING,
             unique: true,
             allowNull:false
         },
-        role:{
+        gender: {
             type: type.STRING,
             allowNull: false
+        },
+        firstDose:{
+            type: type.BOOLEAN,
+        },
+        secondDose:{
+            type: type.BOOLEAN
         }
     })
 }
