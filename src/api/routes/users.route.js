@@ -1,7 +1,6 @@
 const router = require('express').Router();
+const {getAllUsers} = require('../../controllers/users.controller')
 
-router.get('/', (req, res) => {
-    res.json({message: 'hola mundo'}).status(200);
-});
+router.get('/', getAllUsers);
 
 module.exports = router;
