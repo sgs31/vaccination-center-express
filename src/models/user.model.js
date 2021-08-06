@@ -26,6 +26,10 @@ const User = (sequelize, type) =>{
         },
         secondDose:{
             type: type.BOOLEAN
+        },
+        role: {
+            type: type.STRING,
+            allowNull: false
         }
     })
 }
