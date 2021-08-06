@@ -2,7 +2,7 @@ const sequelize = require('sequelize');
 const {connection, Sequelize} = require('./db');
 
 const Turn = (sequelize, type) => {
-    return sequelize.define('turns',{
+    return sequelize.define('turn',{
         id:{
             type: type.INTEGER,
             primaryKey: true,

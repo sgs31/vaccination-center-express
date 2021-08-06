@@ -1,7 +1,7 @@
 const {connection, Sequelize} = require('./db');
 
 const Vaccine = (sequelize, type) => {
-    return sequelize.define('vaccines', {
+    return sequelize.define('vaccine', {
         id: {
             type: type.INTEGER,
             primaryKey: true,

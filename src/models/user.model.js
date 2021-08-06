@@ -1,7 +1,7 @@
 const {connection, Sequelize} = require('./db');
 
 const User = (sequelize, type) =>{
-    return sequelize.define('users', {
+    return sequelize.define('user', {
         id:{
             type: type.INTEGER,
             primaryKey: true,
